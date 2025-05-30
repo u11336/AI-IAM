@@ -44,17 +44,17 @@ An intelligent, AI-powered Identity and Access Management (IAM) system built wit
 
 ------
 ai-iam/
-├── cmd/server/                    # Go application entry point
-├── internal/                      # Go application core
+├── cmd/server/                   # Go application entry point
+├── internal/                     # Go application core
 │   ├── api/                      # HTTP handlers and middleware
 │   ├── core/                     # Business logic (auth, rbac)
 │   ├── data/                     # Data models and repositories
 │   └── utils/                    # Utility functions
 ├── ml-service/                   # Python ML microservice
-│   ├── app/                     # FastAPI application
-│   ├── models/                  # Trained ML models
+│   ├── app/                      # FastAPI application
+│   ├── models/                   # Trained ML models
 │   └── requirements.txt
-├── scripts/                     # Setup and utility scripts
+├── scripts/                      # Setup and utility scripts
 ------
 
 ## 🚀 Quick Start
@@ -168,7 +168,7 @@ Risk scores are calculated using ensemble methods:
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `IAM_PORT` | Server port | 8080 |
-| `IAM_DB_PATH` | Database path | ./iam.db |
+| `IAM_DB_PATH` | Database path | app/data/iam.db |
 | `IAM_JWT_SECRET` | JWT signing secret | (required) |
 | `ML_SERVICE_URL` | ML service URL | http://localhost:8001 |
 
@@ -296,28 +296,6 @@ docker-compose -f docker-compose.test.yml up --abort-on-container-exit
 - Stateless architecture for easy load balancing
 - Database connection pooling
 - Efficient caching strategies
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
-
-### Development Workflow
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Add tests for new functionality
-5. Ensure all tests pass
-6. Commit your changes (`git commit -m 'Add amazing feature'`)
-7. Push to the branch (`git push origin feature/amazing-feature`)
-8. Open a Pull Request
-
-### Code Standards
-
-- Go: Follow standard Go conventions and use `gofmt`
-- Python: Follow PEP 8 and use `black` for formatting
-- All public functions must have documentation
-- Maintain test coverage above 80%
 
 ## 📝 License
 
