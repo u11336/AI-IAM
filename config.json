@@ -1,0 +1,13 @@
+{
+  "port": 8080,
+  "database_path": "/app/data/iam.db",
+  "jwt_secret": "ai-iam-docker-secret-key-change-in-production",
+  "jwt_expiration_hours": 24,
+  "mfa_enabled": true,
+  "anomaly_detection_on": true,
+  "ml_service_enabled": true,
+  "ml_service_url": "http://ml-service:8001",
+  "risk_threshold_low": 0.3,
+  "risk_threshold_medium": 0.6,
+  "risk_threshold_high": 0.9
+}
