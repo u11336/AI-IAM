@@ -30,8 +30,8 @@ func NewRouter(db *sql.DB, logger *utils.Logger, cfg *config.Config) http.Handle
 		MFAEnabled:       cfg.MFAEnabled,
 		MFAIssuer:        "AI-IAM",
 		AnomalyEnabled:   cfg.AnomalyDetectionOn,
-		MLServiceURL:     "http://localhost:8001", // Default ML service URL
-		MLServiceEnabled: true,                    // Enable ML service by default
+		MLServiceURL:     "http://localhost:8001", // Default ML service URL 		cfg.MLServiceURL
+		MLServiceEnabled: true,                    // Enable ML service by default 	cfg.MLServiceEnabled
 	}
 	authService := auth.NewAuthService(userRepo, auditRepo, authConfig)
 

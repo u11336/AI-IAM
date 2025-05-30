@@ -604,4 +604,4 @@ if ! command -v bc &> /dev/null; then
 fi
 
 # Run main function
-main "$@" 
+main "$@"

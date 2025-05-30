@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "=== ENHANCED ML MODEL TRAINING ==="
+echo "=== ML MODEL TRAINING ==="
 
 ML_URL="http://localhost:8001"
 BASE_URL="http://localhost:8080/api"
