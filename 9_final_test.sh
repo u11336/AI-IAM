@@ -578,15 +578,23 @@ main() {
     wait_for_service "$BASE_URL" "AI-IAM Service"
     wait_for_service "$ML_URL" "ML Service"
     
-    # Execute test phases
+    #test phases
     test_system_health
-    train_ml_models  # This is the key addition!
+    read -p "Press Enter for the next script"
+    train_ml_models
+    read -p "Press Enter for the next script"
     test_user_registration
+    read -p "Press Enter for the next script"
     test_authentication
+    read -p "Press Enter for the next script"
     build_normal_behavior_baseline
+    read -p "Press Enter for the next script"
     test_ml_anomaly_detection
+    read -p "Press Enter for the next script"
     test_audit_logging
+    read -p "Press Enter for the next script"
     validate_ml_effectiveness
+    read -p "Press Enter for the next script"
     generate_test_report
     
     print_step "All tests completed successfully!"
