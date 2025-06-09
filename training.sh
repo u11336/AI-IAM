@@ -215,7 +215,7 @@ TRAINING_RESPONSE=$(curl -s -X POST "$ML_URL/train" \
 
 echo "Training Response: $TRAINING_RESPONSE"
 
-echo -e "\n4. Wait for training to complete (15 seconds):"
+echo -e "\n4. Wait for training to complete:"
 sleep 15
 
 echo -e "\n5. Check models status after training:"
